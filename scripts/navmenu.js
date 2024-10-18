@@ -44,7 +44,7 @@ window.addEventListener("load", () => {
 	function getStatus(){
 		var timeout = new Promise((_, reject) => setTimeout(() => reject(new Error("Timeout")), 2000));
 		Promise.race([
-			fetch(`http://${IP}?_=${new Date().getTime()}`, {mode: "no-cors"}),
+			fetch(`https://${IP}?_=${new Date().getTime()}`, {mode: "no-cors"}),
 			timeout
 		])
 		.then(r=>{
