@@ -5,7 +5,7 @@ function checkStatus(){
 	var sts = document.getElementById("status");
 	if(GLOBAL_connected === true){
 		if(!enabled){
-			iframe.src = `http://${IP}`;
+			iframe.src = `https://${IP}`;
 			iframe.style.visibility = "visible";
 		}
 		enabled = true;
