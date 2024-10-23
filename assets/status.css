@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'VTC';
+    src: url('VTCGoblinHandBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}   
+
+body{
+	font-family: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Segoe UI Emoji";
+	font-size: 12px;
+	color: #FFFFFF;
+	background-image: url("bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100vh;
+}
+
+.menu-container{
+	width: 75%;
+	max-height: calc(100vh - 96px - 64px);
+	margin-top: 96px;
+	margin-bottom: 64px;
+	padding: 0 35px 35px;
+	background-color: rgba(48, 48, 48, 0.75);
+	background-image:
+		url("menu-top-left.png"), url("menu-top-right.png"), url("menu-top.png"),
+		url("menu-bottom-left.png"), url("menu-bottom-right.png"), url("menu-bottom.png"),
+		url("menu-left.png"), url("menu-right.png");
+	background-position:
+		top 0px left 0px, top right, top left 35px,
+		bottom 0px left 0px, bottom right, bottom left 35px,
+		left, right;
+	background-repeat:
+		no-repeat, no-repeat, repeat-x,
+		no-repeat, no-repeat, repeat-x,
+		repeat-y, repeat-y;
+	background-size:
+		40px 40px, 40px 40px, 20px 30px,
+		40px 40px, 40px 40px, 20px 30px,
+		25px 20px, 25px 20px;
+	border: 1px solid #848484;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.menu{
+	padding: 0px;
+	flex: 1 1 auto;
+	max-height: 100%;
+	overflow-y: auto;
+}
+
+.header{
+	padding: 20px;
+	padding-top: 55px;
+	text-align: center;
+	font-size: 24px;
+	color: #FAFB0D;
+	border-bottom: 10px solid #848484;
+	font-family: 'VTC';
+	font-weight: bold;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+.game{
+	padding: 20px;
+	font-size: 18px;
+	border-bottom: 5px solid #848484;
+	cursor: pointer;
+}
+
+.game:hover{
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.splitter{
+	width: 100%;
+}
+
+.left{
+	text-align: left;
+	font-weight: bold;
+}
+
+.right{
+	text-align: right;
+	font-weight: bold;
+}
+
+.groups{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.groups td, .groups th{
+	padding: 2px 10px;
+	border: 1px solid #848484;
+	overflow: hidden;
+	word-break: break-word;
+	text-align: center;
+	vertical-align: center;
+	font-size: 12px;
+}
+
+.usercount{
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 75%;
+}
+
+@media only screen and (max-width: 600px){
+	.menu-container{
+		width: 100%;
+	}
+	
+	.header{
+		font-size: 18px;
+	}
+	
+	.game{
+		font-size: 12px;
+	}
+	
+	.groups td, .groups th{
+		font-size: 10px;
+	}
+}
